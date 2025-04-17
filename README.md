@@ -33,6 +33,28 @@ This project utilizes OpenStreetMap (OSM) building data to simulate realistic en
 6. **Results & Visualization**: Outputs are saved to a CSV file and visualized in a 3D coverage plot by threshold and Tx set.
 
 ---
+## 🧰 Tech Stack
+
+The project leverages a range of technologies and features within MATLAB to simulate and optimize 5G transmitter deployment in an urban environment.
+
+| Layer | Technology | Purpose |
+|-------|------------|---------|
+| **Core Language** | MATLAB (R2023a) | Numerical computing, simulation, optimization |
+| **Visualization** | Site Viewer (built-in) | 3D visualization of transmitters, receivers, and coverage over maps |
+| **Geospatial Data** | OpenStreetMap (`map.osm`) | Urban building data for ray tracing and signal obstruction |
+| **Signal Propagation** | `propagationModel("raytracing")` | Simulates realistic 5G signal paths with configurable reflection counts |
+| **Simulation Logic** | Brute Force Search (Custom) | Exhaustive evaluation of all possible Tx combinations for maximum Rx coverage |
+| **Data Handling** | Tables, CSV (`writetable`) | Result storage and analysis |
+
+
+### Optional Tools / Extensions
+- **Mapping Toolbox** *(optional)*: Not required, but can enhance map rendering and geospatial analysis.
+- **Genetic Algorithm Toolbox** *(future scope)*: For optimizing Tx placement more efficiently than brute force.
+
+---
+
+> ⚠️ Note: This project is designed to work without MATLAB's Mapping Toolbox, making it lightweight and portable.
+
 
 ## ⚙️ How to Run
 
